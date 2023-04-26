@@ -10,7 +10,7 @@
 - [Errori comuni](#Errori comuni)
 
 
-## Cos'è Sugar e a cosa serve?!
+# Cos'è Sugar e a cosa serve?!
 
 
 
