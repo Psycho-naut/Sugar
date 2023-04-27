@@ -38,6 +38,39 @@ sudo apt update
 sudo apt install mariadb-server
 sudo systemctl start mariadb.service
 ```
+Ora aggiungiamo tra gli utenti nel DB il nostro utente locale.
+
+Ricaviamo il nome del nostro utente con il seguente comando :
+```bash
+whoami
+```
+e lanciamo mariaDB : 
+```bash
+sudo mariadb
+```
+
+Ora lanciamo la seguente query :
+
+```mysql
+# Inserire il nome del proprio utente al posto di user
+
+CREATE USER 'user'@'localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+Ora il nostro utente locale potrà accedere al database e modificarlo.
+
+Verifichiamo che il pacchetto utils-linux sia già installato : 
+
+```bash
+dpkg -l|grep utils-linux
+```
+Altrimenti installiamolo con il comando : 
+
+```bash
+sudo apt install utils-linux -y
+```
 
 
 ## Creazione Directory
