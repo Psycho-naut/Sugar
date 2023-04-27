@@ -30,6 +30,16 @@ Gli export generati, sempre in csv, vengono salvati in genere nella directory /v
 La versione corrente è stata testata su Linux Mint 21.
 
 ## Installazione Dipendenze
+
+Iniziamo con l'installazione di mariaDB, lanciando i seguenti comandi : 
+
+```bash
+sudo apt update
+sudo apt install mariadb-server
+sudo systemctl start mariadb.service
+```
+
+
 ## Creazione Directory
 
 Dopo aver scaricato Sugar con il comando :
