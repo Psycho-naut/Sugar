@@ -94,28 +94,36 @@ sudo chmod +x Sugar.sh
 ```
 
 # Utilizzo
-### Link a documentazione esterna 
 
-# Come contribuire
+### Creazione Database
 
-## Installare le dipendenze di sviluppo
+```bash
+Sugar.sh --generate
+o
+Sugar.sh -g
+```
+Per creare un database rinominato in Wigle, al cui interno verranno create due tabelle, una per le reti wifi e l'altra per le reti bluetooth.
 
-## Struttura del progetto
+### Contare le reti presenti nel csv o nel database
 
-## Community
+```bash
+Sugar.sh --count <csv|db|all>
+o
+Sugar.sh -c <csv|db|all>
+```
+Per contare le reti presenti nel file csv esportato da Wigle bisogna prima copiarlo all'interno directory Sugar/input/ .
+Per contare le reti presenti nel database bisogna prima crearlo con l'opzione -g e poi popolarlo.
 
-### Code of conduct
+### Creare gli script .sql per inserire i record nel database
 
-### Responsible Disclosure
+```bash
+Sugar.sh --split
+o
+Sugar.sh -s
+```
 
-### Segnalazione bug e richieste di aiuto
 
-# Manutenzione 
 
-# Licenza 
 
-## Licenza generale 
 
 ## Autori e Copyright
-
-## Licenze software dei componenti di terze parti
