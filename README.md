@@ -88,6 +88,7 @@ lanciamo i seguenti comandi :
 cd Sugar
 mkdir -p {input,log,output}
 mkdir -p output/sql
+mkdir -p conf/tmp
 
 # Assegnamo i permessi di esecuzione allo script 
 sudo chmod +x Sugar.sh
