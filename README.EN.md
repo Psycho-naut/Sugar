@@ -88,6 +88,7 @@ we run the following commands:
 cd Sugar
 mkdir -p {input,log,output}
 mkdir -p output/sql
+mkdir -p conf/tmp
 
 # Assign execute permissions to the script 
 sudo chmod +x Sugar.sh
