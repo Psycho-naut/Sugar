@@ -1,0 +1,7 @@
+SELECT * FROM wifi
+WHERE Capabilities
+LIKE "%WEP%"
+INTO OUTFILE './Export_WIFI_WEP.csv' 
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n';
+

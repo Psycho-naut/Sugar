@@ -1,0 +1,7 @@
+SELECT * FROM wifi
+WHERE Capabilities
+LIKE "%WPA%"
+INTO OUTFILE './Export_WIFI_WPA.csv' 
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\n';
+
