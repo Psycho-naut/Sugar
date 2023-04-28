@@ -112,18 +112,62 @@ o
 Sugar.sh -c <csv|db|all>
 ```
 Per contare le reti presenti nel file csv esportato da Wigle bisogna prima copiarlo all'interno directory Sugar/input/ .
-Per contare le reti presenti nel database bisogna prima crearlo con l'opzione -g e poi popolarlo.
+Per contare le reti presenti nel database bisogna prima crearlo con l'opzione -g e poi popolarlo con l'opzione -i.
 
-### Creare gli script .sql per inserire i record nel database
+### Divisione reti e creazione script .sql 
 
 ```bash
 Sugar.sh --split
 o
 Sugar.sh -s
 ```
+L'opzione --split divide le reti bluetooth da quelle wifi e modifica i file rendendoli delle query eseguibili sul DB.
 
+### Inserimento record nel database
 
+```bash
+Sugar.sh --insert
+o
+Sugar.sh -i
+```
+L'opzione --insert lancia le query all'interno del db in modo tale da inserire i record, se durante l'esecuzione viene registrato un errore inerente alla sintassi si consiglia di controllare i due file all'interno della directory Sugar/output/sql/, dopo averli aperti con qualsiasi editor assicurarsi che non siano presenti caratteri sporchi.
 
+### Export dati da DB
+
+```bash
+Sugar.sh --export
+o
+Sugar.sh -e
+
+"Opzioni"
+
+Sugar.sh --export b
+o
+Sugar.sh --export w
+o
+Sugar.sh --export wb
+
+```
+con l'opzione --export possiamo selezionare ed esportare tutti i record presenti nelle tabelle, questi in genere verranno salvati nella directory /var/lib/mysql
+
+l'opzione --export b esporta il contenuto della tabella bluetooth, --export w esporta il contenuto della tabella wifi, --export wb esporta entrambe in due file .csv separati.
+
+Le opzioni sopracitate non producono output.
+
+```bash
+Sugar.sh --export w+
+o
+Sugar.sh --export n
+```
+
+L'ozpione --export w+ permette di ricercare i record in base alla chiave (WPA2,WPA,WEP,ESS), in output viene rimandato il risultato della select, in seguito è possibile salvare il risultato della query.
+
+L'opzione --export n permette di cercare su una delle due tabelle a scelta dei record partendo dal nome.
 
 
 ## Autori e Copyright
+
+Autore: Psychonaut
+
+Non mi assumo nessuna responsabilità in merito all'uso dello script, creato al solo fine di studiare la manipolazione di file csv e il loro storage.
+Lo script può essere scaricato e modificato a piacimento.
