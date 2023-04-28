@@ -160,7 +160,7 @@ o
 Sugar.sh --export n
 ```
 
-L'ozpione --export w+ permette di ricercare i record in base alla chiave (WPA2,WPA,WEP,ESS), in output viene rimandato il risultato della select, in seguito è possibile salvare il risultato della query.
+L'opzione --export w+ permette di ricercare i record in base alla chiave (WPA2,WPA,WEP,ESS), in output viene rimandato il risultato della select, in seguito è possibile salvare il risultato della query.
 
 L'opzione --export n permette di cercare su una delle due tabelle a scelta dei record partendo dal nome della rete (SSID).
 
