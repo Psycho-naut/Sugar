@@ -35,7 +35,7 @@ Iniziamo con l'installazione di mariaDB, lanciando i seguenti comandi :
 
 ```bash
 sudo apt update
-sudo apt install mariadb-server
+sudo apt install libmariadb3 libmariadb-dev mariadb-server
 sudo systemctl start mariadb.service
 ```
 Ora aggiungiamo tra gli utenti nel DB il nostro utente locale.
